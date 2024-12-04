@@ -1,4 +1,4 @@
-from challenges.day_2 import is_report_safe
+from challenges.day_2 import is_report_safe, is_report_safe_w_dampener
 
 input = [
     [7, 6, 4, 2, 1],
@@ -10,45 +10,45 @@ input = [
 ]
 
 
-def test_is_report_safe() -> None:
+def test_is_report_safe_w_dampener() -> None:
 
     report_idx = 0
     safety_exp = True
-    safety_act = is_report_safe(input[report_idx])
+    safety_act = is_report_safe_w_dampener(input[report_idx])
 
     assert safety_exp == safety_act
 
     report_idx = 1
     safety_exp = False
-    safety_act = is_report_safe(input[report_idx])
+    safety_act = is_report_safe_w_dampener(input[report_idx])
 
     assert safety_exp == safety_act
 
     report_idx = 2
     safety_exp = False
-    safety_act = is_report_safe(input[report_idx])
+    safety_act = is_report_safe_w_dampener(input[report_idx])
 
     assert safety_exp == safety_act
 
     report_idx = 3
-    safety_exp = False
-    safety_act = is_report_safe(input[report_idx])
+    safety_exp = True
+    safety_act = is_report_safe_w_dampener(input[report_idx])
 
     assert safety_exp == safety_act
 
     report_idx = 4
-    safety_exp = False
-    safety_act = is_report_safe(input[report_idx])
+    safety_exp = True
+    safety_act = is_report_safe_w_dampener(input[report_idx])
 
     assert safety_exp == safety_act
 
     report_idx = 5
     safety_exp = True
-    safety_act = is_report_safe(input[report_idx])
+    safety_act = is_report_safe_w_dampener(input[report_idx])
 
     assert safety_exp == safety_act
 
 
 if __name__ == "__main__":
 
-    test_is_report_safe()
+    test_is_report_safe_w_dampener()
